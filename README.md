@@ -1,14 +1,13 @@
-# SKY Carpet Urban (Project Owner Case Study)**  
+# **SKY Carpet Urban – E‑commerce Launch (Project Owner Case Study)**
 ### *E‑commerce projekt pre koberce mestského štýlu*
 
----
-
-# **SKY Carpet Urban – E‑commerce Launch (Project Owner Case Study)**
-
-SKY Carpet Urban bol projekt zameraný na vytvorenie moderného e‑commerce riešenia pre predaj **mestských, dizajnových kobercov** pre mladšiu cieľovú skupinu.  
+SKY Carpet Urban bol projekt zameraný na vytvorenie moderného e‑commerce riešenia pre predaj **kusových kobercov* pre mladšiu cieľovú skupinu.
 Značka bola postavená na **emócii, štýle a identite**, nie na tradičnom „kobercovom“ segmente.
+Projekt komunikuje štýl veľkomesta, životný štýl, dynamiku a rôznorodosť.
 
 Ako **Project Owner** som zastrešil návrh, špecifikáciu, UX, procesný dizajn, technickú implementáciu a integrácie potrebné pre spustenie projektu.
+
+![Screenshot](Screenshots-&-Artefacts/preview.jpg)
 
 ---
 
@@ -49,15 +48,14 @@ Moje zodpovednosti zahŕňali:
 - Návrh dátových tokov medzi systémami  
 
 ### 🔹 **2. UX & Brand Design**
-- Wireframy a UI návrhy  
 - Návrh vizuálnej identity e‑shopu  
-- Customer Journey Map
-- Informačná architektúra  
-- Návrh kategorizácie produktov tak aby boli zodpovedané základné otázky rozhodovania sa klienta (kam, veľkosť, design)
+- UI návrhy a štýly
+- Design manual (komentované vzory)
+- Návrh kategorizácie produktov - zodpovedajú 3 základné otázky klienta
 
 ### 🔹 **3. Technical Implementation**
 - Customizácia Upgates šablón pre moderný vizuálny štýl - Uprava tém v Latte 
-- Nastavenie produktových feedov  
+- Nastavenie produktových feedov - custom xml parser v pythone pre Google Merchant Center
 - Integrácia Google Merchant Center + platená reklama 
 - Integrácia Google Analytics + Tag Manager  
 - Návrh a implementácia manuálneho skladového workflowu (viď nižšie)
@@ -83,6 +81,11 @@ Navrhol som preto **manuálny, ale efektívny a bezplatný workflow**, ktorý:
 
 `[Stock Sync Django Tool – GitHub Repository](URL sem)`
 
+3. **Vytvorený jednoduchý XML parser**  
+   - integrovaný upgates feed neodzrkadloval potreby kobercového segmentu
+   - spracuje existujúce cvs dáta z upgates
+   - vytvorí na ftp xml súbor kompatibilný s Google Merchant Center
+  
 ---
 
 ## 🖼️ **Screenshots & Artefacts**
@@ -93,7 +96,9 @@ Navrhol som preto **manuálny, ale efektívny a bezplatný workflow**, ktorý:
 - Cieľová skupina  
 - Návrh hodnotovej ponuky  
 - UX koncept  
-- MVP definícia  
+- MVP definícia
+  
+![Screenshot](Screenshots-&-Artefacts/Stakeholder-Presentation.png)
 
 ### 🔹 **2. Screenshots e‑shopu**
 www.sky-carpet-urban.sk
