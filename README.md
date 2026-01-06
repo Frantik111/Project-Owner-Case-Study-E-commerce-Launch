@@ -176,3 +176,11 @@ Projekt mi umožnil spojiť business analýzu, UX a technické myslenie do jedn�
 
 Projekt bol ukončený po zmene majiteľa a zmene strategických priorít.  
 Ukončenie nebolo spojené s kvalitou riešenia, ale s reorganizáciou firmy.
+
+## 📜 License
+
+This project is published under the **CC BY-NC-ND 4.0 license**.  
+It is intended as a portfolio showcase for job applications.  
+You may view and share it for non-commercial, educational or evaluative purposes only.
+
+© Zdenko Siegel, 2026
