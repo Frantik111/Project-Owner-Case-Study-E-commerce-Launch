@@ -4,10 +4,10 @@
 Projekt som viedol end‑to‑end — od definície hodnotovej ponuky a procesnej analýzy až po UX návrhy, technickú implementáciu a marketingové integrácie.
 
 **Project Summary**
-- **End‑to‑end e‑commerce projekt pre mestskú lifestyle značku.**
-- **Ako Project Owner som zastrešil business analýzu, UX návrh, procesný dizajn,**
+- **End‑to‑end e‑commerce projekt** pre mestskú lifestyle značku.
+- Ako **Project Owner** som zastrešil **business analýzu, UX návrh, procesný dizajn,**
 - **Customizáciu Upgates platformy a marketingové integrácie.**
-- **Súčasťou projektu bol aj Python/Django nástroj pre správu skladových zásob.**
+- Súčasťou projektu bol aj **Python/Django** nástroj pre správu skladových zásob - **2x data pipeline**
 
 **Relevantné BA kompetencie**
 - Requirements engineering
@@ -80,29 +80,55 @@ Moje zodpovednosti zahŕňali:
 
 ---
 
-## 🛠️ **Python/Django – Custom Stock Sync Workflow**
+## 🛠️ Data Pipelines for Product Feeds & Stock Synchronization (Python & Django)##
+
+Cieľom bolo zabezpečiť kvalitné produktové dáta pre marketingové kanály a zároveň minimalizovať náklady na externé integrácie v počiatočnej fáze projektu.
+Navrhol som dve samostatné, ale navzájom prepojené dátové pipeline.
+
+### **A. XML Google Merchant Data Pipeline (Python)**
+
+Štandardný Upgates feed neumožňoval exportovať všetky údaje potrebné pre Google Merchant Center.  
+Preto som vytvoril vlastnú XML pipeline:
+
+1. **Automatizované získavanie CSV exportov z Upgates**
+   - kategórie  
+   - produkty + skladové informácie  
+
+2. **Transformácia a mapovanie dát**
+   - kombinácia oboch tabuliek v Python skripte  
+   - mapovanie na štruktúru Google Merchant feedu  
+   - validácia dát  
+
+3. **Automatizované denné spúšťanie**
+   - generovanie XML feedu  
+   - nahrávanie na FTP pre Google Merchant Center  
+
+---
+
+### **B. Django – Custom Stock Sync Workflow**
 
 V počiatočnej fáze projektu nebol rozpočet na externé skladové integrácie.  
 Navrhol som preto **manuálny, ale efektívny a bezplatný workflow**, ktorý:
 
-1. **Stiahol skladové zásoby od dodávateľov**  
+1. **Získal skladové zásoby od dodávateľov**
    - email → CSV  
    - FTP → CSV  
 
-2. **Django aplikácia spracovala CSV**  
-   - aktualizovala databázu produktov  
-   - označila zmeny (delta)
+2. **Spracoval dáta v Django aplikácii**
+   - aktualizácia databázy produktov  
+   - označenie zmien (delta)  
 
-3. **Jedným kliknutím sa vygeneroval Upgates‑kompatibilný CSV export**  
-   - pripravený na import do e‑shopu  
-   - bez potreby platiť za integráciu
+3. **Generoval Upgates‑kompatibilný CSV export**
+   - pripravený na okamžitý import  
+   - bez potreby platiť za integráciu  
 
-`[Stock Sync Django Tool – GitHub Repository](URL sem)`
 
-4. **Vytvorený jednoduchý XML parser**  
-   - integrovaný upgates feed neodzrkadloval potreby kobercového segmentu
-   - spracuje existujúce cvs dáta z upgates
-   - vytvorí na ftp xml súbor kompatibilný s Google Merchant Center
+### **Business Impact**
+
+- Zabezpečenie kvalitných produktových dát pre Google Merchant → vyššia relevancia reklám  
+- Eliminácia manuálnej práce pri aktualizácii skladov  
+- Úspora nákladov na externé integrácie v early‑stage fáze  
+- Flexibilita pri úpravách feedu podľa potrieb značky  
   
 ---
 
